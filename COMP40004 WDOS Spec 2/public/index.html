@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Heliya Fernando's portfolio.">
+    <title>Heliya | Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#6f4e37">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000">
+    
+</head>
+
+<body>
+    <div id="myPage">
+
+        <header>
+            <!-- logo made by myself-->
+            <picture>
+                <img src="images/lg.avif" alt="Your Logo" id="logo">
+            </picture>
+
+        </header>
+
+        <nav class="mainNav">
+            <!-- Navigation Bar -->
+
+            <ul>
+                <li><a aria-current="page" href="index.html">Home</a></li>
+                <li><a href="qualifications.html">Quals</a></li>
+                <li><a href="interest.html">Cloud</a></li>
+                <li><a href="demos.html">Demos</a></li>
+            </ul>
+
+        </nav>
+
+
+        <main>
+            <div id="homeDiv">
+                <h1 id="welcometopic">Welcome to My Portfolio</h1>
+
+                <div id="aboutDiv">
+                    <picture>
+
+                        <!-- my image -->
+                        <img src="images/me.jpg" alt="me" id="me" srcset="images/me2.webp 1x, images/me.webp 2x"
+                            width="256" height="256">
+
+
+                    </picture>
+
+
+                    <section id="about-me">
+                        <h2 id="aboutTopic">About Me</h2>
+                        <p>Hello! I'm <strong>Heliya Fernando</strong>, a dedicated Computer Science undergraduate at
+                            Staffordshire
+                            University, UK,
+                            with a deep-seated passion for web development and programming. Originally from Italy, my
+                            journey
+                            has
+                            led me to Stoke-on-Trent, where I embrace the challenges and innovations of the tech world.
+                        </p>
+                        <p>When not coding, you can find me on the football pitch, mastering the latest video game, or
+                            keeping
+                            fit
+                            at the gym. These hobbies not only keep me balanced but also fuel my drive for excellence in
+                            everything
+                            I do.</p>
+                    </section>
+                </div>
+
+
+                <section id="skills">
+
+                    <div id="skillsDiv">
+
+                        <div id="skillsPic">
+                            <!-- my image -->
+                            <picture>
+                                <!-- Use WEBP for larger desktop screens -->
+                                <source srcset="images/actorW.webp" media="(min-width: 800px)" type="image/webp">
+                                <!-- Use AVIF for smaller mobile screens -->
+                                <source srcset="images/actorA.avif" media="(max-width: 799px)" type="image/avif">
+                                <!-- Fallback AVIF image for browsers that do not support <source> -->
+                                <img src="images/actor.jpg" id="skillsMe" alt="myskills">
+                            </picture>
+
+                        </div>
+
+                        <div id="skillsOL">
+
+                            <h2>My Skills</h2>
+                            <ol>
+
+                                <li>Web Development <em>(HTML, CSS, JavaScript)</em></li>
+                                <li>Programming <em>(Python, Java)</em></li>
+                                <li>Security Fundamentals</li>
+                                <li>Database Management</li>
+                                <li>Data Analysis</li>
+                                <li>Cloud Computing</li>
+                                <li>Problem Solving and Critical Thinking</li>
+                                <li>Leadership</li>
+                                <li>Time Management</li>
+                                <li>Teamwork</li>
+
+                            </ol>
+
+                        </div>
+
+                    </div>
+                </section>
+                <section id="hobbies">
+
+                    <div id="hobbiesDiv">
+
+                        <div id="hobbiesPic">
+                            <picture>
+                                <img src="images/skills.avif" id="hobbie" alt="hobbie">
+                            </picture>
+                            <!-- my image -->
+                        </div>
+
+                        <div id="hobbiesUL">
+
+                            <h2>My Hobbies</h2>
+                            <ul>
+                                <li>Playing Football</li>
+                                <li>Gyming</li>
+                                <li>Playing Cricket</li>
+                                <li>Playing Badminton</li>
+                                <li>Watching Movies</li>
+                                <li>Travelling</li>
+                                <li>Playing video games</li>
+                                <li>Listening to music</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+        <footer>
+
+            <p>&copy;This project has been developed by <strong>Heliya Fernando</strong>, student ID
+                <strong>F039825m</strong>,<strong>2024</strong>, as
+                part of the coursework for the Web Development and Operating Systems module at Staffordshire
+                University.
+            </p>
+                <!-- html validation -->
+            <p>View the <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fhf-2024.web.app%2Findex.html"
+                    target="_blank" id="validate">HTML validation results</a> for this page on the W3C Markup Validation
+                Service.
+            </p>
+
+        </footer>
+
+    </div>
+    <!-- service worker -->
+    <script>
+
+        //check whether browser support service workers
+        
+        if ('serviceWorker' in navigator) {
+        
+        //wait until page loaded to avoid delaying rendering
+        
+        window.addEventListener('load', function() {
+        
+        //register service worker
+        
+        navigator.serviceWorker.register('serviceworker.js').then(
+        
+        function(registration) {
+        
+        console.log('Service worker registration successful',registration);
+        
+        },
+        
+        function(err) {
+        
+        console.log('Service worker registration failed', err);
+        
+        });
+        
+        });
+        
+        }
+        
+        </script>
+</body>
+
+</html>

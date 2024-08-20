@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Welcome to Qualifications ">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heliya | Qualifications </title><!--change in title change in table format change in navigation-->
+  <link href="styles.css" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#6f4e37">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000">
+</head>
+
+<body>
+  <div id="myPage">
+
+    <header>
+      <!-- logo made by myself-->
+      <picture>
+        <img src="images/lg.avif" alt="Logo" id="logo">
+      </picture>
+
+    </header>
+    <nav class="mainNav">
+
+      <!-- Navigation Bar -->
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a aria-current="page" href="qualifications.html">Quals</a></li>
+        <li><a href="interest.html">Cloud</a></li>
+        <li><a href="demos.html">Demos</a></li>
+      </ul>
+
+    </nav>
+
+    <main>
+
+      <h2>Qualifications</h2>
+
+      <img src="images/star.avif" alt="Star" id="Star">
+
+      <section id="tableq">
+        <h3>Qualification Details</h3>
+
+        <p>My name is Heliya Fernando. I was given this page and have corrected all the issues with the HTML and the
+          image
+          onthis page as part of my assessment.</p>
+
+        <p>This table contains qualifications I have studied, and ones I am currently studying:</p>
+
+      </section>
+
+      <table id="qualify">
+        
+        <tr>
+          <th>Level</th>
+          <th>Subject</th>
+          <th>Completion date</th>
+          <th>Result</th>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>Foundation Degree</td>
+          <td>05/2023</td>
+          <td>A</td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>BTEC Computer Science</td>
+          <td>05/2022</td>
+          <td>A</td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>DTEC</td>
+          <td>09/2021</td>
+          <td>A</td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td>ESOL</td>
+          <td>05/2019</td>
+          <td>A</td>
+        </tr>
+
+      </table>
+
+      <section id="subject">
+        <h2>Subject</h2>
+
+        <p>I will have covered all of these subjects by the end of my first year at <strong>Staffordshire
+            University</strong>.
+        </p>
+
+        <ul>
+          <li>Programming languages</li>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>C#</li>
+          <li>Networking</li>
+          <li>Cybersecurity</li>
+          <li>Digital technologies</li>
+          <li>Web pages</li>
+          <li>Operating systems</li>
+        </ul>
+
+      </section>
+
+    </main>
+                                                                                                                  <!-- html validation      -->
+    <footer>My name is Heliya Fernando and I am studying a degree in at Staffordshire University.View the <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fhf-2024.web.app%2Fqualifications.html"
+      target="_blank" id="validate">HTML validation results</a> for this page on the W3C Markup Validation Service. </footer>
+
+  </div>
+  <!-- serviceWorker -->
+  <script>
+
+    //check whether browser support service workers
+    
+    if ('serviceWorker' in navigator) {
+    
+    //wait until page loaded to avoid delaying rendering
+    
+    window.addEventListener('load', function() {
+    
+    //register service worker
+    
+    navigator.serviceWorker.register('serviceworker.js').then(
+    
+    function(registration) {
+    
+    console.log('Service worker registration successful',registration);
+    
+    },
+    
+    function(err) {
+    
+    console.log('Service worker registration failed', err);
+    
+    });
+    
+    });
+    
+    }
+    
+    </script>
+
+</body>
+
+</html>

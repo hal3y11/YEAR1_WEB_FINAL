@@ -1,0 +1,123 @@
+/* This is the extra style for the CSS demo page only
+This should be linked to alongside the main styles.css page */
+
+#cssbody {
+  background-color: whitesmoke;
+  font-family: 'Arial';
+  font-size: 16px;
+  font-weight: normal;
+
+
+}
+
+#csspage {
+  min-width: 320px;
+  max-width: 939px;
+  width: 100%;
+  margin: 0 auto;
+  background: lightgreen;
+}
+
+#cssMain {
+  width: 100%;
+  height: auto;
+}
+
+
+article {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+a {
+  color: #2575fc;
+
+}
+
+a:hover {
+  color: #6a11cb;
+}
+
+header {
+
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#demoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* Creates a responsive number of columns */
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+#one,
+#two,
+#three,
+#four {
+  margin-bottom: 20px;
+  /* Adds bottom margin to each item */
+}
+
+#one {
+  background-color: yellow;
+}
+
+#two {
+  background-color: lightcoral;
+}
+
+#three {
+  background-color: aquamarine;
+}
+
+#four {
+  background-color: beige;
+}
+
+@media (max-width: 850px) {
+  #demoGrid {
+    grid-template-columns: 1fr;
+    /* One column layout for smaller screens */
+  }
+}
+
+/* animation */
+#anime {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  transform-origin: center;
+  margin: 20px;
+  padding: 20px;
+
+}
+
+@keyframes example {
+  0% {
+    background-color: red;
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+
+  25% {
+    background-color: yellow;
+    transform: translate(200px, 0px) scale(1.5) rotate(0deg);
+  }
+
+}
+
+#tAnime,
+#wonder {
+  margin: 20px;
+  padding: 20px;
+}

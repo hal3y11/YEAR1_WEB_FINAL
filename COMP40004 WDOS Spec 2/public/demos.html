@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Heliya Fernando's demos.">
+    <title>Heliya | Demos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#6f4e37">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000">
+</head>
+
+<body>
+    <div id="myPage">
+        <header>
+            <picture>
+                <!-- logo made by myself -->
+                <img src="images/lg.avif" alt="Your Logo" id="logo">
+            </picture>
+        </header>
+
+        <nav class="mainNav">
+            <!-- Navigation Bar -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="qualifications.html">Quals</a></li>
+                <li><a href="interest.html">Cloud</a></li>
+                <li><a aria-current="page" href="demos.html">Demos</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>Demo Showcase</h1>
+
+
+            <section>
+                <div class="gridc">
+                    <div class="gridcss">
+                        <h2>CSS Demo</h2>
+                        <picture>
+                            <img src="images/finalcss.avif" alt="CSS Demo" id="css" width="300" height="300">
+                            <!-- https://play.google.com/store/apps/details?id=com.codeliber.csspro&hl=en_US -->
+                        </picture>
+                        <p>This demo showcases advanced <strong>CSS</strong> techniques, including flexbox layouts,
+                            animations, and responsive design principles. See how CSS alone can transform the look and
+                            feel of a webpage, making it dynamic, engaging, and accessible across all devices.</p>
+
+                        <a href="cssdemo.html" id="links">View the CSS Demo</a>
+                    </div>
+                    <div class="gridjava">
+                        <h2>JavaScript Demo (Coming Soon)</h2>
+                        <picture>
+                            <img src="images/finaljs.avif" alt="JavaScript Demo" id="java" width="300" height="300">
+                            <!-- https://play.google.com/store/apps/details?id=com.javascriptfree&pli=1 -->
+                        </picture>
+                        <p>Stay tuned for our upcoming <strong>JavaScript</strong> demo. This demo will illustrate the
+                            power of
+                            JavaScript in adding interactive features to web pages, including dynamic content updates,
+                            form
+                            validation, and more.</p>
+
+                        <a href="holding.html" id="link">JavaScript Demo Placeholder</a>
+
+
+                    </div>
+                </div>
+
+
+                
+                
+
+            </section>
+
+
+
+        </main>
+        <footer>
+            <p>&copy; This project has been developed by <strong>Heliya Fernando</strong>, student ID
+                <strong>F039825m</strong>, year <strong>2024</strong>, as
+                part of the coursework for the Web Development and Operating Systems module at Staffordshire University.
+            </p>
+                                <!-- html validation -->
+            <p>View the <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fhf-2024.web.app%2Fdemos.html"
+                    target="_blank" id="validate">HTML validation results</a> for this page on the W3C Markup Validation
+                Service.</p>
+
+
+
+        </footer>
+    </div>
+    <!-- serviceWorker -->
+    <script>
+
+        //check whether browser support service workers
+        
+        if ('serviceWorker' in navigator) {
+        
+        //wait until page loaded to avoid delaying rendering
+        
+        window.addEventListener('load', function() {
+        
+        //register service worker
+        
+        navigator.serviceWorker.register('serviceworker.js').then(
+        
+        function(registration) {
+        
+        console.log('Service worker registration successful',registration);
+        
+        },
+        
+        function(err) {
+        
+        console.log('Service worker registration failed', err);
+        
+        });
+        
+        });
+        
+        }
+        
+        </script>
+</body>
+
+</html>
